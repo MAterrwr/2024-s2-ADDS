@@ -1,3 +1,4 @@
+// Player.h
 #ifndef PLAYER_H
 #define PLAYER_H
 
@@ -6,9 +7,9 @@
 
 class Player {
 public:
+    virtual ~Player() {}
     virtual Move* makeMove() = 0;
     virtual std::string getName() const = 0;
-    virtual ~Player() {}
 };
 
 #endif // PLAYER_H

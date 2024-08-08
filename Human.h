@@ -1,16 +1,31 @@
+// Human.h
 #ifndef HUMAN_H
 #define HUMAN_H
 
 #include "Player.h"
-#include "Move.h"
-#include <string>
+#include <iostream>
 
 class Human : public Player {
-    std::string name;
 public:
-    Human(const std::string& name);
-    Move* makeMove() override;
-    std::string getName() const override;
+    std::string getName() const override {
+        return name;
+    }
+
+    Move* makeMove() override {
+        std::string moveName;
+        std::cout << "Enter Move: ";
+        std::cin >> moveName;
+        // Instantiate the appropriate Move object based on user input
+        // This should be improved with a factory pattern or similar
+        if (moveName == "Rock") {
+            return new Rock();
+        }
+        // Add other moves here
+        return nullptr; // Invalid move
+    }
+
+private:
+    std::string name;
 };
 
 #endif // HUMAN_H

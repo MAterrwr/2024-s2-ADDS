@@ -1,3 +1,4 @@
+// Move.cpp
 #include "Move.h"
 
-// No need to redefine getName methods here as they are already defined in Move.h
+// Implementation of specific moves will go here
