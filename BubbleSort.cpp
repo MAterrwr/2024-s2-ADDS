@@ -11,7 +11,7 @@ std::vector<int> BubbleSort::sort(std::vector<int> list) {
                 swapped = true;
             }
         }
-        --n; // Decrease n because the last element is already in place
+        --n; 
     } while (swapped);
     return list;
 }

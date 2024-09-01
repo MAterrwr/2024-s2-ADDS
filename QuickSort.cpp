@@ -14,12 +14,12 @@ void QuickSort::quicksort(std::vector<int>& list, int low, int high) {
 }
 
 int QuickSort::partition(std::vector<int>& list, int low, int high) {
-    int pivotIndex = low + 2; // Always select the third element as pivot if possible
+    int pivotIndex = low + 2; 
     if (pivotIndex > high) {
         pivotIndex = high;
     }
     int pivot = list[pivotIndex];
-    std::swap(list[pivotIndex], list[high]); // Move pivot to end
+    std::swap(list[pivotIndex], list[high]); 
     int i = low;
     for (int j = low; j < high; ++j) {
         if (list[j] < pivot) {

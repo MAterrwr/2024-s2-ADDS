@@ -11,4 +11,4 @@ private:
     int partition(std::vector<int>& list, int low, int high);
 };
 
-#endif // QUICKSORT_H
+#endif 
